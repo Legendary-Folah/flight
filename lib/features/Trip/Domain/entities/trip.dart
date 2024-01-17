@@ -1,0 +1,16 @@
+import 'package:google_maps_flutter/google_maps_flutter.dart';
+
+class Trip {
+  final String? title;
+  final List<String>? pictures;
+  final String? description;
+  final DateTime? date;
+  final LatLng? location;
+
+  Trip(
+      {required this.title,
+      required this.pictures,
+      required this.description,
+      required this.date,
+      required this.location});
+}

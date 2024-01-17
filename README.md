@@ -15,3 +15,6 @@ For help getting started with Flutter development, view the
 [online documentation](https://docs.flutter.dev/), which offers tutorials,
 samples, guidance on mobile development, and a full API reference.
 # flight
+
+This App was created by me still perfecting my craft using Hive as storage system, Clean Architecture because having your code
+all organized is good and it also splits your codebase into different layers so as to be able to track any bug easily and also Riverpod for state management.

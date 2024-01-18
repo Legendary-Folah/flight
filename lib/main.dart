@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 import 'package:hotel_ui/features/Trip/Data/models/trip_model.dart';
-import 'package:hotel_ui/features/Trip/Presentation/screens/main_screen.dart';
+import 'package:hotel_ui/main_screen.dart';
 import 'package:path_provider/path_provider.dart';
 
 Future<void> main() async {

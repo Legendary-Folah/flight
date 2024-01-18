@@ -27,6 +27,19 @@ class MainScreen extends ConsumerWidget {
       appBar: AppBar(
         backgroundColor: FlightColors.appBarColor,
         centerTitle: false,
+        title: const Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(
+              'Hi Fola',
+              style: TextStyle(fontSize: 26, fontWeight: FontWeight.bold),
+            ),
+            Text(
+              'Travelling today ?',
+              style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+            ),
+          ],
+        ),
       ),
       backgroundColor: FlightColors.bgColor,
       body: PageView(

@@ -26,6 +26,7 @@ class MainScreen extends ConsumerWidget {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: FlightColors.appBarColor,
+        centerTitle: false,
       ),
       backgroundColor: FlightColors.bgColor,
       body: PageView(

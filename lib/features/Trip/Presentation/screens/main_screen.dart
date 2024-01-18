@@ -2,27 +2,37 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:hotel_ui/core/colors/colors.dart';
 
-class MainScreen extends ConsumerWidget {
-  MainScreen({super.key});
+class MainScreen extends ConsumerStatefulWidget {
+  const MainScreen({super.key});
 
+  @override
+  ConsumerState<MainScreen> createState() => _MainScreenState();
+}
+
+class _MainScreenState extends ConsumerState<MainScreen> {
   final PageController _controller = PageController();
+
   late int _currentIndex = 0;
 
+  @override
   void dispose() {
+    super.dispose();
     _controller.dispose();
   }
 
   void _onItemTapped(int index) {
-    _currentIndex = index;
-    _controller.animateToPage(
-      index,
-      duration: const Duration(milliseconds: 300),
-      curve: Curves.easeIn,
-    );
+   setState(() {
+     _currentIndex = index;
+     _controller.animateToPage(
+       index,
+       duration: const Duration(milliseconds: 300),
+       curve: Curves.easeIn,
+     );
+   });
   }
 
   @override
-  Widget build(BuildContext context, WidgetRef ref) {
+  Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: FlightColors.bgColor,

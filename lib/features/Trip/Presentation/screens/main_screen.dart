@@ -25,18 +25,25 @@ class MainScreen extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: FlightColors.appBarColor,
+        backgroundColor: FlightColors.bgColor,
+        elevation: 0,
         centerTitle: false,
         title: const Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
               'Hi Fola',
-              style: TextStyle(fontSize: 26, fontWeight: FontWeight.bold),
+              style: TextStyle(
+                  fontSize: 26,
+                  fontWeight: FontWeight.bold,
+                  color: FlightColors.defaultTextColor),
             ),
             Text(
               'Travelling today ?',
-              style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+              style: TextStyle(
+                  fontSize: 18,
+                  fontWeight: FontWeight.w500,
+                  color: FlightColors.defaultTextColor),
             ),
           ],
         ),

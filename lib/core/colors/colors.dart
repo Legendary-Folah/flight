@@ -6,5 +6,6 @@ class FlightColors {
 
   static const bgColor = Color(0xFFFFFFFF);
   static const defaultTextColor = Colors.black;
+  static const boxColor = Colors.blueGrey;
 
 }

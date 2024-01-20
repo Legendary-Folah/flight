@@ -8,9 +8,9 @@ class AddTripScreen extends ConsumerWidget {
 
   final _formKey = GlobalKey<FormState>();
   final _titleController = TextEditingController(text: "city 1");
-  final _descriptionController = TextEditingController(text: "city 1");
-  final _locationController = TextEditingController(text: "city 1");
-  final _pictureController = TextEditingController(text: "city 1");
+  final _descriptionController = TextEditingController(text: "City of light");
+  final _locationController = TextEditingController(text: "Lagos");
+  final _pictureController = TextEditingController(text: "sunshine.png");
   final List<String> pictures = [];
 
   @override
@@ -23,7 +23,19 @@ class AddTripScreen extends ConsumerWidget {
             FlightTextFormField(
               titleController: _titleController,
               labelText: 'title',
-            )
+            ),
+            FlightTextFormField(
+              titleController: _descriptionController,
+              labelText: 'description',
+            ),
+            FlightTextFormField(
+              titleController: _locationController,
+              labelText: 'location',
+            ),
+            FlightTextFormField(
+              titleController: _pictureController,
+              labelText: 'picture',
+            ),
           ],
         ),
       ),

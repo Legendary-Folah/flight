@@ -8,6 +8,7 @@ class MyTripScreen extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final tripList = ref.watch(tripListNotifierProvider);
+    print('triplist: $tripList');
     return ListView.builder(
       itemCount: tripList.length,
         itemBuilder: (context, index) {

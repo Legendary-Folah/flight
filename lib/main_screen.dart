@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:hotel_ui/core/colors/colors.dart';
+import 'package:hotel_ui/features/Trip/Presentation/screens/add_trip_screen.dart';
 import 'package:hotel_ui/features/Trip/Presentation/screens/my_trip_screen.dart';
 
 class MainScreen extends ConsumerStatefulWidget {
@@ -65,9 +66,9 @@ class _MainScreenState extends ConsumerState<MainScreen> {
         onPageChanged: (int index) {
           _currentIndex = index;
         },
-        children: const [
+        children: [
           MyTripScreen(),
-          Center(child: Text('2')),
+          AddTripScreen(),
           Center(child: Text('3'))
         ],
       ),

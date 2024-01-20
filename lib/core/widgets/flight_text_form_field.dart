@@ -15,7 +15,6 @@ class FlightTextFormField extends StatelessWidget {
     return TextFormField(
       controller: _titleController,
       decoration: InputDecoration(
-        border: InputBorder.none,
         labelText: labelText,
         contentPadding: const EdgeInsets.all(10.0),
       ),

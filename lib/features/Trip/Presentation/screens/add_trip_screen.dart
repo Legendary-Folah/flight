@@ -1,6 +1,10 @@
+import 'dart:ffi';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:hotel_ui/core/colors/colors.dart';
+import 'package:hotel_ui/features/Trip/Domain/entities/trip.dart';
+import 'package:hotel_ui/features/Trip/Logic/provider/trip_provider.dart';
 
 import '../../../../core/widgets/flight_text_form_field.dart';
 
@@ -58,7 +62,20 @@ class AddTripScreen extends ConsumerWidget {
                 color: FlightColors.buttonColor,
               ),
               child: TextButton(
-                onPressed: () {},
+                onPressed: () {
+                  pictures.add(_pictureController.text);
+                  if (_formKey.currentState!.validate()) {
+                    final newTrip = Trip(
+                      title: _titleController.text,
+                      pictures: pictures,
+                      description: _descriptionController.text,
+                      date: DateTime.now(),
+                      location: _locationController.text,
+                    );
+                    ref.read(tripListNotifierProvider.notifier).addNewTrip(newTrip);
+                    ref.watch(tripListNotifierProvider.notifier).loadTrips();
+                  }
+                },
                 child: const Text(
                   'Add Trip',
                   style: TextStyle(color: FlightColors.bgColor, fontSize: 18),

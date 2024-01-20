@@ -4,6 +4,8 @@ import 'package:hotel_ui/core/colors/colors.dart';
 import 'package:hotel_ui/features/Trip/Presentation/screens/add_trip_screen.dart';
 import 'package:hotel_ui/features/Trip/Presentation/screens/my_trip_screen.dart';
 
+import 'features/Trip/Logic/provider/trip_provider.dart';
+
 class MainScreen extends ConsumerStatefulWidget {
   const MainScreen({super.key});
 
@@ -35,6 +37,7 @@ class _MainScreenState extends ConsumerState<MainScreen> {
 
   @override
   Widget build(BuildContext context) {
+    ref.watch(tripListNotifierProvider.notifier).loadTrips();
     return Scaffold(
       appBar: AppBar(
         backgroundColor: FlightColors.bgColor,
@@ -67,9 +70,9 @@ class _MainScreenState extends ConsumerState<MainScreen> {
           _currentIndex = index;
         },
         children: [
-          MyTripScreen(),
+          const MyTripScreen(),
           AddTripScreen(),
-          Center(child: Text('3'))
+          const Center(child: Text('3'))
         ],
       ),
       bottomNavigationBar: BottomNavigationBar(

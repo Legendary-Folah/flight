@@ -5,7 +5,7 @@ class Trip {
   final List<String>? pictures;
   final String? description;
   final DateTime? date;
-  final LatLng? location;
+  final String? location;
 
   Trip(
       {required this.title,

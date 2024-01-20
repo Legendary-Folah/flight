@@ -21,7 +21,7 @@ class TripModelAdapter extends TypeAdapter<TripModel> {
       pictures: (fields[1] as List?)?.cast<String>(),
       description: fields[2] as String?,
       date: fields[3] as DateTime?,
-      location: fields[4] as LatLng?,
+      location: fields[4] as String?,
     );
   }
 

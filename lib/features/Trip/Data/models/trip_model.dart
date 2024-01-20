@@ -16,7 +16,7 @@ class TripModel {
   @HiveField(3)
   final DateTime? date;
   @HiveField(4)
-  final LatLng? location;
+  final String? location;
 
   TripModel(
       {required this.title,
